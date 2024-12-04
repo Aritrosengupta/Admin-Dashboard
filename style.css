@@ -3,16 +3,16 @@
     padding: 0;
 }
 body{
-    height: 100vh;
-    width: 100vw;
+    height: auto;
+    width: 100%;
     
 }
 
 .container{
-    height: 100vh;
+    height: inherit;
     width: inherit;
     display: grid;
-    grid-template-columns: 2fr 11fr;
+    grid-template-columns: 2fr 7fr 4fr;
     grid-template-rows: repeat(10,minmax(100px,1fr));
 }
 
@@ -75,10 +75,10 @@ body{
 
 
 .nav{
-    
+    grid-column: 2/-1;
     grid-row: 1/3;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2,minmax(00px,1fr));
     grid-template-rows: 1fr 1fr;
     column-gap: 100rem;
     box-shadow: 5px 20px 18px gainsboro;
@@ -86,7 +86,7 @@ body{
 
 
 input{
-    width: 250rem;
+    width: clamp(150px,100%,250rem);
     height: 10rem;
     background-color: #e5e7eb;
     border-radius: 4rem;
