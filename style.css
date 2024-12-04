@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+.container{
+    height: inherit;
+    width: inherit;
+    display: grid;
+    grid-template-columns: 2fr 11fr;
+    grid-template-rows: 2fr 8fr;
+}
+.dashboard{
+    border: 2px solid;
+    grid-column: 1;
+    grid-row: 1/-1;
+    background-color:#38bdf8;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+ 
+}  
+#dashboard-icon{
+    fill: white;
+    height: 10em;
+   
+}
+.heading{
+    display: grid;
+    grid-template-columns:auto repeat(1,minmax(150px,1fr));
+    gap: 10px;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+    margin-left: 5em;
+    margin-top: 2em;
+    color: white;
+    
+    
+}
+.heading > h1{
+    font-size: 4rem;
+}
+.navigation, .help{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+    margin-left: 7em;
+    margin-top: 2em;
+    color: white;
+    
+}
+.link > span{
+    font-size:3.5rem;
+}
+.link{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 5rem;
+}
+.link > svg{
+    height: 5rem;
+    fill: white;
+}
+
+
