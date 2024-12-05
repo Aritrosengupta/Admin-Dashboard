@@ -12,18 +12,19 @@ body{
     height: inherit;
     width: inherit;
     display: grid;
-    grid-template-columns: 2fr 7fr 4fr;
+    grid-template-columns:minmax(200px, 2fr) minmax(300px, 7fr) minmax(200px, 4fr);
     grid-template-rows: repeat(10,minmax(100px,1fr));
+    overflow: hidden;
 }
 
 .dashboard{
-    border: 2px solid;
+   
     grid-column: 1;
     grid-row: 1/-1;
     background-color:#38bdf8;
     display: flex;
     flex-direction: column;
-    gap: 18rem;
+    gap: 12rem;
  
 }  
 #dashboard-icon{
@@ -49,7 +50,7 @@ body{
 }
 .navigation, .help{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
     gap: 3.5rem;
     align-items: center;
     overflow: hidden;
@@ -78,10 +79,10 @@ body{
     grid-column: 2/-1;
     grid-row: 1/3;
     display: grid;
-    grid-template-columns: repeat(2,minmax(00px,1fr));
+    grid-template-columns: repeat(2,minmax(100px,1fr));
     grid-template-rows: 1fr 1fr;
     column-gap: 100rem;
-    box-shadow: 5px 20px 18px gainsboro;
+    box-shadow: 5px 20px 18px #CADCFC;
  }
 
 
@@ -138,9 +139,12 @@ input{
     width: 20rem;
     border-radius: 12rem;
 }
-.intro{
+#intro-main{
     margin-top: 2rem;
     font-size: 4rem;
+}
+#intro-main >span{
+    font-size: 80px;
 }
 .createbutton{
     grid-column: 2;
@@ -168,10 +172,11 @@ input{
     grid-row: 3/-1;
     display: grid;
     grid-template-columns: repeat(2,minmax(150px,3fr)) repeat(1,minmax(150px,2fr));
-    background-color:#e2e8f0;
-
+    background-color:#CADCFC;
+    overflow: auto;
+    
 }
-#title{
+.title{
    
     /* grid-column: 1;
     margin-top: 7rem; */
@@ -194,8 +199,8 @@ input{
     display:flex;
     flex-direction: column;
     margin-top: 12rem;
-    gap: 3rem;
-   
+    gap: 2rem;
+  
 
 }
 .logo > svg{
@@ -203,9 +208,13 @@ input{
 }
 .card-container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-   row-gap: 12rem;
+    grid-template-columns: repeat(2,minmax(450px,170rem));
+    grid-template-rows: repeat(3,minmax(250px,1fr));
+    gap: 6rem;
+    padding: 2rem;
+    box-sizing:border-box;
+    overflow: auto;
+    
 }
 .card >h2{
     font-size: 7rem;
@@ -218,14 +227,80 @@ input{
     flex-direction: column;
     gap: 2px;
     flex-wrap: wrap;
-    width: 150rem;
+    height: 50em;
+    background-color: white;
+    padding: 12rem;
+    border-radius: 5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-shadow: 5px 20px 18px #CADCFC;
+    
+   
+ 
+}
+.logo{
+    margin-top: 12rem;
+    align-self: flex-end;
+}
+.news{
+    grid-column: 3/-1;
+    grid-row: 1/-1;
+    display: flex;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 6rem;
+   
+}
+.announcement{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex-wrap: wrap;
+    width: 80rem;
     background-color: white;
     padding: 15rem;
     border-radius: 5rem;
     align-items: flex-start;
     justify-content: flex-start;
+    font-size: 4em;
+    box-shadow: 5px 20px 18px #CADCFC;
 }
-.logo{
-    margin-top: 12rem;
-    align-self: flex-end;
+ul{
+    list-style-type:none;
+}
+.explore >ul{
+    display: flex;
+}
+.people{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-wrap: wrap;
+    width: 80rem;
+    background-color: white;
+    padding: 12rem;
+    border-radius: 5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 4em;
+    height: 13em;
+    box-shadow: 5px 20px 18px #CADCFC;
+  
+}
+.intro > img{
+    width: 12rem;
+    border-radius: 6rem;
+}
+.intro{
+    display: flex;
+    gap: 2em;
+    
+}
+.intro-inner{
+   font-size: 30px; 
+}
+.intro-inner >span{
+    font-size: 2.5em;
+    font-weight: bolder;
 }
