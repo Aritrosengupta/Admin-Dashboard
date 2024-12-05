@@ -83,8 +83,8 @@ body{
     grid-template-rows: 1fr 1fr;
     column-gap: 100rem;
     box-shadow: 5px 20px 18px #CADCFC;
- }
-
+    background-color:#fffbeb;
+}
 
 input{
     width: clamp(150px,100%,250rem);
@@ -237,6 +237,7 @@ input{
     justify-content: flex-start;
     box-shadow: 5px 20px 18px #CADCFC;
     overflow: hidden;
+    border-left:8em solid #fcd34d;
    
  
 }
@@ -280,7 +281,7 @@ ul{
     flex-wrap: wrap;
     width: 80rem;
     background-color: white;
-    padding: 12rem;
+    padding: 8rem;
     border-radius: 5rem;
     align-items: flex-start;
     justify-content: flex-start;
